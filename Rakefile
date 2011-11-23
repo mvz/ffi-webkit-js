@@ -3,15 +3,9 @@ require 'rake/testtask'
 
 namespace :test do
 
-  Rake::TestTask.new(:unit) do |t|
+  Rake::TestTask.new(:run) do |t|
     t.libs = ['lib']
-    t.test_files = FileList['test/unit/*_test.rb']
-    t.ruby_opts += ["-w"]
-  end
-
-  Rake::TestTask.new(:integration) do |t|
-    t.libs = ['lib']
-    t.test_files = FileList['test/integration/*_test.rb']
+    t.test_files = FileList['test/*_test.rb']
     t.ruby_opts += ["-w"]
   end
 
@@ -22,6 +16,6 @@ namespace :test do
   end
 end
 
-desc 'Run unit and integration tests'
-task :test => ['test:unit', 'test:integration']
+desc 'Run tests'
+task :test => ['test:run']
 
