@@ -1,0 +1,14 @@
+= FFI-WebKit-JS
+
+by Matijs van Zuijlen
+
+== Description
+
+A bridge between GirFFI-based bindings for WebKitGtk's GObject API and Matt
+Mesanko's RubyJS gem.
+
+Based on bridging code by Matt Mesanko.
+
+== License
+
+tbd.
